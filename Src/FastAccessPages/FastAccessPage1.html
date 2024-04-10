@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>fastaccess by michael franiatte</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-size: 1.1vw;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #999;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ddd;
+        }
+        #page {
+            margin: 7.95%;
+        }
+        .box {
+            margin: 1%;
+            border: solid 2px white;
+            border-radius: 10px;
+            display: inline-block;
+            width: 12vw;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .content {
+            text-decoration: none;
+            margin: auto;
+            padding: 0;
+            margin: auto;
+        }
+    </style>
+
+    <style>
+        .autocomplete {
+            position: relative;
+            display: float;
+            float: left;
+            width: 24vw;
+        }
+        input {
+            position: relative;
+            display: float;
+            float: left;
+            border: 1px solid transparent;
+            background-color: #f1f1f1;
+            padding: 1vw;
+        }
+        input[type=text] {
+            background-color: #f1f1f1;
+            width: 100%;
+            border-radius: 10px 0 0 10px;
+            border-bottom: solid 2px rgb(203, 201, 201);
+            border-top: solid 2px rgb(203, 201, 201);
+            border-left: solid 2px rgb(203, 201, 201);
+        }
+        input[type=submit] {
+            background-color: rgb(53, 51, 51);
+            color: white;
+            border-radius: 0 10px 10px 0;
+            border-bottom: solid 2px white;
+            border-top: solid 2px white;
+            border-right: solid 2px white;
+        }
+        .search {
+            display: block;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+            text-align: left;
+            align-items: left;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="search">
+        <div class="autocomplete">
+            <input id="search" type="text" placeholder="Google search">
+        </div>
+        <input type="submit" onclick="search();" value="Search">
+    </div>
+    <br />
+    <div id="page">
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://app.molotov.tv/channels/'">
+            <div class="content"style="color: white;">molotov</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.6play.fr'">
+            <div class="content"style="color: white;">6play</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.tf1.fr'">
+            <div class="content"style="color: white;">tf1</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.youtube.com'">
+            <div class="content"style="color: white;">youtube</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.google.com'">
+            <div class="content"style="color: white;">google</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.engadget.com'">
+            <div class="content"style="color: white;">engadget</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.twitch.tv'">
+            <div class="content"style="color: white;">twitch</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://open.spotify.com'">
+            <div class="content"style="color: white;">spotify</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://store.steampowered.com'">
+            <div class="content"style="color: white;">steampowered</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.netflix.com/fr-en/'">
+            <div class="content"style="color: white;">netflix</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.tiktok.com/@wiimot3'">
+            <div class="content"style="color: white;">wiimot3</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://steamcommunity.com/id/nicoreda2'">
+            <div class="content"style="color: white;">nicoreda2</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://steamcommunity.com/app/1938090/discussions/'">
+            <div class="content"style="color: white;">steamcommunity</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://meteofrance.com/previsions-meteo-france/grand-est/4'">
+            <div class="content"style="color: white;">previsions</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://github.com/michaelandrefraniatte'">
+            <div class="content"style="color: white;">github</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://michaelandrefraniatte.github.io'">
+            <div class="content"style="color: white;">michael</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://store.epicgames.com/en-US/'">
+            <div class="content"style="color: white;">epicgames</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.xbox.com/fr-FR/play'">
+            <div class="content"style="color: white;">xbox</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.pole-emploi.fr/'">
+            <div class="content"style="color: white;">pole-emploi</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.caf.fr/'">
+            <div class="content"style="color: white;">caf</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.ca-lorraine.fr/'">
+            <div class="content"style="color: white;">ca-lorraine</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.youtube.com/results?search_query=wiimote&sp=EgIIAg%253D%253D'">
+            <div class="content"style="color: white;">Wiimote</div>
+        </div>
+        <div class="box" style="background-color: rgb(53, 51, 51);" onclick="window.location.href='https://www.youtube.com/results?search_query=wii+remote&sp=EgIIAg%253D%253D'">
+            <div class="content"style="color: white;">Wii Remote</div>
+        </div>
+    </div>
+    <copyrights style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;"><b>© MAF</b></copyrights>
+    
+    <script>
+        function search() {
+            var searchterm = document.getElementById("search").value;
+            window.location.href = "https://www.google.com/search?q=" + searchterm;
+        }
+        document.getElementById("search").addEventListener("keydown", function (e) {
+            if (e.keyCode == 13) {
+                search();
+            }
+        });
+    </script>
+</body>
+</html>
