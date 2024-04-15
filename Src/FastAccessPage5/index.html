@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Fast Access</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 1.1vw;
+            background: url('img/background.jpg') no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #999;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ddd;
+        }
+        #page {
+            margin: 7.95%;
+        }
+        .box {
+            margin: 1%;
+            border-width: 3px;
+            border-style: solid;
+            border-image: linear-gradient(to bottom right, rgb(15, 35, 15) 25%, rgb(255, 54, 54) 100%) 1;
+            display: inline-block;
+            width: 12vw;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: dodgerblue;
+        }
+        .content {
+            text-decoration: none;
+            margin: auto;
+            padding: 0;
+            margin: auto;
+            color: rgb(15, 40, 15);
+        }
+    </style>
+
+    <style>
+        .autocomplete {
+            position: relative;
+            display: float;
+            float: left;
+            width: 24vw;
+        }
+        input {
+            position: relative;
+            display: float;
+            float: left;
+            border: 1px solid transparent;
+            padding: 1vw;
+        }
+        input[type=text] {
+            background-color: dodgerblue;
+            color: rgb(15, 40, 15);
+            width: 100%;
+            border-top: solid 3px rgb(15, 40, 15);
+            border-bottom: solid 3px rgb(15, 40, 15);
+            border-left: solid 3px rgb(15, 40, 15);
+        }
+        input[type=submit] {
+            background-color: rgb(255, 54, 54);
+            color: white;
+            border: solid 3px rgb(15, 40, 15);
+            cursor: pointer;
+        }
+        .search {
+            display: block;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+            text-align: left;
+            align-items: left;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="search">
+        <div class="autocomplete">
+            <input id="search" type="text" placeholder="Google search">
+        </div>
+        <input type="submit" onclick="search();" value="Search">
+    </div>
+    <br />
+    <div id="page">
+        <div class="box" onclick="window.location.href='https://app.molotov.tv/channels/'">
+            <div class="content">molotov</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.6play.fr'">
+            <div class="content">6play</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.tf1.fr'">
+            <div class="content">tf1</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.youtube.com'">
+            <div class="content">youtube</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.google.com'">
+            <div class="content">google</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.engadget.com'">
+            <div class="content">engadget</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.twitch.tv'">
+            <div class="content">twitch</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://open.spotify.com'">
+            <div class="content">spotify</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://store.steampowered.com'">
+            <div class="content">steampowered</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.netflix.com/fr-en/'">
+            <div class="content">netflix</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.tiktok.com/@wiimot3'">
+            <div class="content">wiimot3</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://steamcommunity.com/id/nicoreda2'">
+            <div class="content">nicoreda2</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://steamcommunity.com/app/1938090/discussions/'">
+            <div class="content">steamcommunity</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://meteofrance.com/previsions-meteo-france/grand-est/4'">
+            <div class="content">previsions</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://github.com/michaelandrefraniatte'">
+            <div class="content">github</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://michaelandrefraniatte.github.io'">
+            <div class="content">michael</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://store.epicgames.com/en-US/'">
+            <div class="content">epicgames</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.xbox.com/fr-FR/play'">
+            <div class="content">xbox</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.pole-emploi.fr/'">
+            <div class="content">pole-emploi</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.caf.fr/'">
+            <div class="content">caf</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.ca-lorraine.fr/'">
+            <div class="content">ca-lorraine</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.youtube.com/results?search_query=wiimote&sp=EgIIAg%253D%253D'">
+            <div class="content">Wiimote</div>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.youtube.com/results?search_query=wii+remote&sp=EgIIAg%253D%253D'">
+            <div class="content">Wii Remote</div>
+        </div>
+    </div>
+    <copyrights style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;"><b>© MAF</b></copyrights>
+    
+    <script>
+        function search() {
+            var searchterm = document.getElementById("search").value;
+            window.location.href = "https://www.google.com/search?q=" + searchterm;
+        }
+        document.getElementById("search").addEventListener("keydown", function (e) {
+            if (e.keyCode == 13) {
+                search();
+            }
+        });
+    </script>
+</body>
+</html>
