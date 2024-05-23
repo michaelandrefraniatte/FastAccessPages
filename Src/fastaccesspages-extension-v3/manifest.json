@@ -1,0 +1,15 @@
+{
+  "name": "Fast Access",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "An extension for open fast access page.",
+  "icons": {
+    "16": "icons/wv16x16.png",
+    "32": "icons/wv32x32.png",
+    "64": "icons/wv64x64.png",
+    "128": "icons/wv128x128.png"
+  },
+  "action": {
+      "default_popup": "popup/popup.html"
+  }
+}
