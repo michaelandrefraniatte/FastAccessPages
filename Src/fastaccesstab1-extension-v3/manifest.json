@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Fast Access Tab",
+    "description": "An extension for open fast access page in a new tab.",
+    "version": "0.0.0.1",
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "icons": {
+        "16": "icons/wv16x16.png",
+        "32": "icons/wv32x32.png",
+        "64": "icons/wv64x64.png",
+        "128": "icons/wv128x128.png"
+    },
+    "chrome_url_overrides": {
+        "icon": "icons/wv128x128.png",
+        "newtab": "index.html"
+    },
+    "permissions": ["favicon", "storage", "activeTab", "scripting", "file://*/*"],
+    "host_permissions": ["*://*/*", "file://*/*"], 
+    "browser_action": {
+        "default_icon": "icons/wv128x128.png",
+        "default_title": "Fast Access Tab"
+    },
+    "homepage_url": "https://github.com/michaelandrefraniatte"
+}
